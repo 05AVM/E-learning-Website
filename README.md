@@ -8,46 +8,60 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 E-Learning Website
+
 This is an E-Learning Website project built using Vite, React, and Tailwind CSS.
 
-Table of Contents
-Overview
-Features
-Installation
-Usage
-Technologies Used
-Contributing
-License
-Overview
+Table of Contents:--
+1.Overview
+
+2.Features
+
+3.Installation
+
+4.Usage
+
+5.Technologies Used
+
+6.Contributing
+
+7.License
+
+
+
+1.Overview
 This project is an E-Learning Website that provides a platform for users to access online courses, learn new skills, and engage with interactive content. The website offers a user-friendly interface with intuitive navigation and a visually appealing design.
 
-Features
+
+2.Features
+
 Browse and Enroll in Courses: Users can explore a wide range of courses and enroll in the ones that interest them.
-User and Admin Roles: The website differentiates between user and admin roles, each with their own set of permissions and functionalities.
-Add to Cart: Users can add courses to their cart for easy checkout and payment.
 User Dashboard: Registered users have access to a personalized dashboard that displays their enrolled courses and progress.
 Course Content: Each course includes interactive lessons, quizzes, and multimedia content.
-Search Functionality: Users can search for specific courses or topics using the search bar.
 Responsive Design: The website is fully responsive and works seamlessly on various devices.
-Installation
-Clone the repository: git clone https://github.com/your-username/e-learning-website.git
-Navigate to the project directory: cd e-learning-website
-Install dependencies: npm install
-Usage
-Start the development server: npm run dev
-Open your browser and go to: http://localhost:3000
-Explore the website, browse courses, and interact with the features.
-Technologies Used
-Vite
-React
-Tailwind CSS
-Contributing
+
+3.Installation
+a.Clone the repository: git clone https://github.com/your-username/e-learning-website.git
+b.Navigate to the project directory: cd e-learning-website
+c.Install dependencies: npm install
+
+4.Usage
+a.Start the development server: npm run dev
+b.Open your browser and go to: http://localhost:3000
+c.Explore the website, browse courses, and interact with the features.
+
+5.Technologies Used
+a.Vite
+b.React
+c.Tailwind CSS
+
+6.Contributing
 We welcome contributions to improve this project. If you find any issues or have ideas for new features, feel free to open an issue or submit a pull request.
 
-Fork the repository.
-Create your feature branch: git checkout -b feature-name
-Commit your changes: git commit -m 'Add some feature'
-Push to the branch: git push origin feature-name
-Submit a pull request.
-License
+a.Fork the repository.
+b.Create your feature branch: git checkout -b feature-name
+c.Commit your changes: git commit -m 'Add some feature'
+d.Push to the branch: git push origin feature-name
+e.Submit a pull request.
+
+7.License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as per the terms of the license.
