@@ -8,7 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState(null);
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, isAuthenticated,logout,user} = useAuth0();
   useEffect(() => {
     const scrollActive = () => {
       setActive(window.scrollY > 20);
@@ -42,14 +42,29 @@ const Navbar = () => {
               return <NavLink key={navLink.id} {...navLink} />;
             })}
           </div>
-          <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg
+          {isAuthenticated && <p className='font-bold text-sm text-Teal'>Signed in as <br></br>{user.name}</p>}
+            {isAuthenticated ? (
+          <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}  className="py-3 px-6 font-bold text-sm border border-solid rounded-lg
           transition-colors duration-300 hover:bg-yellow-500 hover:text-teal-500
-          transform hover:border-gray "onClick={() => loginWithRedirect()}>Sign Up</button>
+          transform hover:border-gray ">Log Out</button>
+            ):
+         (
+          <button onClick={() => loginWithRedirect()} className="py-3 px-6 font-bold text-sm border border-solid rounded-lg
+          transition-colors duration-300 hover:bg-yellow-500 hover:text-teal-500
+          transform hover:border-gray ">Log In</button>
+          )}
           {toggle && (
             <div className='fixed h-full w-96 top-0 left-0 z-20 bg-Teal text-white flex flex-col justify-center items-center shadow-lg gap-8 py-8'>
+            
+          
+
+            
+            
               {navLinks.map(navLink => {
                 return <MobileNavLink key={navLink.id} {...navLink} setToggle={setToggle} />;
               })}
+
+
               <HiX 
                 className="absolute right-12 top-12 text-3xl cursor-pointer" 
                 onClick={(prev) => setToggle(!prev)}/>
@@ -62,27 +77,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
-
-/*
-text-xs: Extra-small text
-text-sm: Small text
-text-base: Base/default text size
-text-lg: Large text
-text-xl: Extra-large text
-text-2xl: Twice the base size
-text-3xl: Three times the base size
-text-4xl: Four times the base size
-text-5xl: Five times the base size
-text-6xl: Six times the base size
-Font weight:
-
-font-thin: Thin font weight
-font-normal: Normal font weight
-font-medium: Medium font weight
-font-semibold: Semi-bold font weight
-font-bold: Bold font weight
-font-extrabold: Extra-bold font weight
-font-black: Black font weight
-
-*/
